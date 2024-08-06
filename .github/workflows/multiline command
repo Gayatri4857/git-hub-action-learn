@@ -1,0 +1,16 @@
+name: Learn basic of GitHub Action
+on:
+  push:
+    branches:
+      -  master
+jobs:    
+  install-java:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
+    steps:
+      - name: install java
+        run: |
+          apk 
+          run: java --version add --no-cache openjdk11-jdk
+      - name: print java -version
